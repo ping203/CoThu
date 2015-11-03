@@ -30,8 +30,8 @@ public class MainControl : StageControl {
 
     // Update is called once per frame
     void Update () {
-       // lb_chip.text = (BaseInfo.formatMoneyNormal (BaseInfo.gI ().mainInfo.moneyChip) + Res.MONEY_UNIT);
-		lb_chip.text = (BaseInfo.formatMoneyNormal (ServerController.serverController.coins) + Res.MONEY_UNIT);
+        // lb_chip.text = (BaseInfo.formatMoneyNormal (BaseInfo.gI ().mainInfo.moneyChip) + Res.MONEY_UNIT);
+        lb_chip.text = (BaseInfo.formatMoneyNormal (ServerController.serverController.coins) + Res.MONEY_UNIT);
         if(gameObject.activeInHierarchy && Input.GetKeyDown (KeyCode.Escape)) {
             gameControl.disableAllDialog ();
             onBack ();
@@ -66,15 +66,17 @@ public class MainControl : StageControl {
 
     public void onClickGameSolo () {
         onSelectGame (GameID.SOLO);
+        ServerController.serverController._isModeCard = false;
     }
 
 
     public void onClickGameCard () {
-        //onSelectGame (GameID.CARD);
-        gameControl.toast.setText ("Game đang phát triển!");
+        onSelectGame (GameID.CARD);
+        //gameControl.toast.setText ("Game đang phát triển!");
+        ServerController.serverController._isModeCard = true;
     }
 
-    void onSelectGame(int gameid){
+    void onSelectGame (int gameid) {
         gameControl.gameID = gameid;
         gameControl.room.setGameName ();
         gameControl.setStage (gameControl.room);

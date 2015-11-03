@@ -13,8 +13,8 @@ public class GuiCard : MonoBehaviour {
 
     // Use this for initialization
     void Awake () {
-        SetupSpriteFrames ();
-        setId (5);
+        //SetupSpriteFrames ();
+       // setId (5);
     }
     void Start () {
 
@@ -38,16 +38,10 @@ public class GuiCard : MonoBehaviour {
             id = 52;
         }
         this.id = id;
-        ui2dSprite.sprite2D = sprites[pNumber[id]];
+        ui2dSprite.sprite2D = ServerController.sprites[pNumber[id]];
     }
 
     public void setSprite (int i) {
-        ui2dSprite.sprite2D = sprites[i];
-    }
-
-    private Sprite[] sprites;
-
-    private void SetupSpriteFrames () {
-        sprites = Resources.LoadAll<Sprite> ("Cards/cardAll");
+        ui2dSprite.sprite2D = ServerController.sprites[i];
     }
 }

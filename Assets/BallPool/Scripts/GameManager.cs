@@ -66,6 +66,8 @@ public class GameManager : MonoBehaviour {
 
     public GameObject menu;
 
+    public List<int> cardsID = new List<int> ();
+
     void Awake () {
         if(!MenuControllerGenerator.controller)
             return;
@@ -127,6 +129,16 @@ public class GameManager : MonoBehaviour {
             //StartCoroutine(otherProfile.SetAvatar(firstAvatar));
             //StartCoroutine(myProfile.SetAvatar(secondAvatar));
         }
+
+        genCard ();
+
+        for(int i = 0; i < cardsID.Count; i++) {
+            if(i < 9) {
+                myProfileNew.AddGuiCard (cardsID[i], i);
+            } else {
+                otherProfileNew.AddGuiCard (cardsID[i], i - 9);
+            }
+        }
     }
 
     /*void setPlayer(ProfilePlayer pl, string name, string coints){
@@ -135,6 +147,26 @@ public class GameManager : MonoBehaviour {
         pl.coins.text = coints;
     }
 */
+
+    public void genCard () {
+        int i2 = 0;
+        while(i2 < 18) {
+            int a = Random.Range (0, 52);
+
+            bool isExist = false;
+            for(int j=0; j < cardsID.Count; j++) {
+                if(a == cardsID[j]) {
+                    isExist = true;
+                    break;
+                }
+            }
+            if(!isExist) {
+                i2++;
+                cardsID.Add (a);
+            }
+        }
+    }
+
     void Update () {
         if(calculateShotTime) {
             if(cueController.enabled) {
@@ -244,7 +276,6 @@ public class GameManager : MonoBehaviour {
             ServerController.serverController.coins = Mathf.Clamp (ServerController.serverController.coins, ServerController.serverController.minCoins, ServerController.serverController.maxCoins);
             Profile.SetUserDate (ServerController.serverController.myName + "_Coins", ServerController.serverController.coins);
 
-            //myProfile.coins.text = ServerController.serverController.coins.ToString();
             myProfileNew.coins.text = ServerController.serverController.coins.ToString ();
 
             ServerController.serverController.SendRPCToServer ("SetCoinsToPlayerClient", ServerController.serverController.myNetworkPlayer, ServerController.serverController.coins);
@@ -257,10 +288,8 @@ public class GameManager : MonoBehaviour {
             otherProfileNew.coins.text = ServerController.serverController.otherCoins.ToString ();
 
             if(isWinner) {
-                //myProfile.winner.GetComponent<Renderer>().enabled = true;
                 myProfileNew.setWinner ();
             } else {
-                //otherProfile.winner.GetComponent<Renderer>().enabled = true;
                 otherProfileNew.setWinner ();
             }
             if(ServerController.serverController.coins < ServerController.serverController.prize) {
@@ -308,7 +337,6 @@ public class GameManager : MonoBehaviour {
         this.ballType = ballType;
         if(ballType == 1) {
             for(int i = 0; i < 7; i++) {
-                //myProfile.AddGuiBall(i, cueController.ballTextures[i]);
                 myProfileNew.AddGuiBall (i + 1, i);
                 otherProfileNew.AddGuiBall (i + 9, i);
             }
