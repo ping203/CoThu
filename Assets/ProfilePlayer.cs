@@ -92,9 +92,20 @@ public class ProfilePlayer : MonoBehaviour {
                 }
             }
         }
-        if(countCard == 0){
+        /*if(countCard == 0){
             Debug.Log ("Bạn đã chiến thắng! " + playerName.text);
+        }*/
+    }
+
+    public bool checkBallCard (int id) {
+        for(int i = 0; i < guiCards.Count; i++) {
+            for(int j = 0; j < 4; j++) {
+                if(guiCards[i].getId () == ((id - 1) + 13 * j)) {
+                    return true;
+                }
+            }
         }
+        return false;
     }
 
     public GuiBall FaindGuiBallById (int id) {

@@ -252,25 +252,25 @@ public class HolleController : MonoBehaviour {
                             cueController.gameManager.firsBalls = null;
                         } else {
                             if(!MenuControllerGenerator.controller.playWithAI || ServerController.serverController.isMyQueue) {
-                                if(!cueController.gameManager.firstHitBall) {
+                                if(cueController.gameManager.myProfileNew.checkBallCard (ballController.id)) {
                                     if(!cueController.gameManager.needToForceChangeQueue) {
                                         cueController.gameManager.needToChangeQueue = false;
                                     }
                                 }
                             }
                             if(MenuControllerGenerator.controller.playWithAI && !ServerController.serverController.isMyQueue) {
-                                if(!cueController.gameManager.firstHitBall) {
+                                if(!cueController.gameManager.firstHitBall || cueController.gameManager.otherProfileNew.checkBallCard (ballController.id)) {
                                     if(!cueController.gameManager.needToForceChangeQueue) {
                                         cueController.gameManager.needToChangeQueue = false;
                                     }
                                 }
                             }
+
+                            cueController.gameManager.myProfileNew.RemoveGuiCard (ballController.id);
+                            cueController.gameManager.otherProfileNew.RemoveGuiCard (ballController.id);
                         }
                     }
 
-
-                    cueController.gameManager.myProfileNew.RemoveGuiCard (ballController.id);
-                    cueController.gameManager.otherProfileNew.RemoveGuiCard (ballController.id);
                 }
                 /*End Game card*/
             }

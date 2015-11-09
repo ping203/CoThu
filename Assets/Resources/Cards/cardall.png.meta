@@ -1,0 +1,771 @@
+fileFormatVersion: 2
+guid: d9b76e0625086ca46a92e0cffd384b7b
+timeCreated: 1445998143
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: cardall_0
+    21300002: cardall_1
+    21300004: cardall_2
+    21300006: cardall_3
+    21300008: cardall_4
+    21300010: cardall_5
+    21300012: cardall_6
+    21300014: cardall_7
+    21300016: cardall_8
+    21300018: cardall_9
+    21300020: cardall_10
+    21300022: cardall_11
+    21300024: cardall_12
+    21300026: cardall_13
+    21300028: cardall_14
+    21300030: cardall_15
+    21300032: cardall_16
+    21300034: cardall_17
+    21300036: cardall_18
+    21300038: cardall_19
+    21300040: cardall_20
+    21300042: cardall_21
+    21300044: cardall_22
+    21300046: cardall_23
+    21300048: cardall_24
+    21300050: cardall_25
+    21300052: cardall_26
+    21300054: cardall_27
+    21300056: cardall_28
+    21300058: cardall_29
+    21300060: cardall_30
+    21300062: cardall_31
+    21300064: cardall_32
+    21300066: cardall_33
+    21300068: cardall_34
+    21300070: cardall_35
+    21300072: cardall_36
+    21300074: cardall_37
+    21300076: cardall_38
+    21300078: cardall_39
+    21300080: cardall_40
+    21300082: cardall_41
+    21300084: cardall_42
+    21300086: cardall_43
+    21300088: cardall_44
+    21300090: cardall_45
+    21300092: cardall_46
+    21300094: cardall_47
+    21300096: cardall_48
+    21300098: cardall_49
+    21300100: cardall_50
+    21300102: cardall_51
+    21300104: cardall_52
+    21300106: cardall_53
+    21300108: cardall_54
+    21300110: cardall_55
+    21300112: cardall_56
+    21300114: cardall_57
+    21300116: cardall_58
+    21300118: cardall_59
+    21300120: cardall_60
+    21300122: cardall_61
+    21300124: cardall_62
+    21300126: cardall_63
+    21300128: cardall_64
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: cardall_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 300
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_1
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 300
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_2
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 300
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_3
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 300
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_4
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 300
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_5
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 300
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_6
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 300
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_7
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 300
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_8
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 300
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_9
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 300
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_10
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 300
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_11
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 300
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_12
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 300
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 225
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_14
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 225
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_15
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 225
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_16
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 225
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_17
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 225
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_18
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 225
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_19
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 225
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_20
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 225
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_21
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 225
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_22
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 225
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_23
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 225
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_24
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 225
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_25
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 225
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 150
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_27
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 150
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_28
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 150
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_29
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 150
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_30
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 150
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_31
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 150
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_32
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 150
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_33
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 150
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_34
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 150
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_35
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 150
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_36
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 150
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_37
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 150
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_38
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 150
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 75
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_40
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 75
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_41
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 75
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_42
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 75
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_43
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 75
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_44
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 75
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_45
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 75
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_46
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 75
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_47
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 75
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_48
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 75
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_49
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 75
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_50
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 75
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_51
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 75
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_52
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_53
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 0
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_54
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_55
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 0
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_56
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_57
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 0
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_58
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_59
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 0
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_60
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_61
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 0
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_62
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 0
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_63
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 0
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cardall_64
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 56
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

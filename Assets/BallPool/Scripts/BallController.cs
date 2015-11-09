@@ -297,7 +297,7 @@ public class BallController : MonoBehaviour {
                         hasFirstHit = true;
                         cueController.gameManager.firstShotHitCount++;
                     }
-                } else if(isMain && layerName == "Ball") {
+                } else if(isMain && layerName == "Ball" && !ServerController.serverController.isModeCard) {
                     BallController firstHitBall = collision.collider.GetComponent<BallController> ();
                     if(!cueController.gameManager.firstHitBall && firstHitBall) {
                         cueController.gameManager.firstHitBall = firstHitBall;
@@ -306,8 +306,7 @@ public class BallController : MonoBehaviour {
                             if((!cueController.gameManager.tableIsOpened &&
                                 (cueController.gameManager.firstHitBall.ballType == cueController.gameManager.ballType ||
                                   (cueController.gameManager.firstHitBall.isBlack && cueController.gameManager.afterRemainedBlackBall)
-                                )
-                               ) ||
+                                )) ||
                                 (!cueController.gameManager.isFirstShot && cueController.gameManager.tableIsOpened && !cueController.gameManager.firstHitBall.isBlack)
                                ) {
                                 cueController.gameManager.setMoveInTable = false;
@@ -331,7 +330,6 @@ public class BallController : MonoBehaviour {
                             }
                         }
                     }
-
                 }
             }
         if(cueController.ballsAudioPlayingCount < 3) {

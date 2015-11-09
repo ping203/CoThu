@@ -255,6 +255,8 @@ public class CueController : MonoBehaviour {
         //btnLeft.pressed
 
         //cuePos = cueForce.transform.position;
+        cueCircularSlider.CircularSliderPress += changeRotateCue;
+        rotation = cuePivot.localRotation.x;
     }
     void OnEnable () {
         if(ServerController.serverController) {
@@ -549,15 +551,16 @@ public class CueController : MonoBehaviour {
                 ballController.gameObject.layer = LayerMask.NameToLayer ("MainBall");
             } else {
                 bc.gameObject.layer = LayerMask.NameToLayer ("Ball");
-                if(i == 8) {
-                    bc.isBlack = true;
-                    bc.ballType = 2;
-                } else if(i >= 1 && i <= 7) {
-                    bc.ballType = 1;
-                } else {
-                    bc.ballType = -1;
+                if(!ServerController.serverController._isModeCard) {
+                    if(i == 8) {
+                        bc.isBlack = true;
+                        bc.ballType = 2;
+                    } else if(i >= 1 && i <= 7) {
+                        bc.ballType = 1;
+                    } else {
+                        bc.ballType = -1;
+                    }
                 }
-
             }
             bc.id = i;
             bc.cueController = this;
@@ -764,7 +767,7 @@ public class CueController : MonoBehaviour {
             }
         }
 
-        if(ServerController.serverController) {
+        if(ServerController.serverController && !ServerController.serverController.isModeCard) {
             if((gameManager.tableIsOpened && (!currentHitBallController || !currentHitBallController.isBlack)) || !currentHitBallController ||
                (currentHitBallController.isBlack && gameManager.ballType != 0 && (ServerController.serverController.isMyQueue ? gameManager.remainedBlackBall : gameManager.otherRemainedBlackBall))) {
                 checkMyBall = true;
@@ -790,6 +793,7 @@ public class CueController : MonoBehaviour {
         ballCollisionLine.enabled = false;
         cuePivot.gameObject.SetActive (false);
         cueForce.gameObject.SetActive (false);
+        cueCircularSlider.gameObject.SetActive (false);
     }
 
     void ShowLineAndSphere (bool isFirst) {
@@ -813,6 +817,7 @@ public class CueController : MonoBehaviour {
 
         //if(ServerController.serverController.isMyQueue) {
         cueForce.gameObject.SetActive (true);
+        cueCircularSlider.gameObject.SetActive (true);
         cueForce.Resset ();
         //}
     }
@@ -876,9 +881,13 @@ public class CueController : MonoBehaviour {
         shotingInProgress = true;
         thenInshoting = false;
         OnBallIsOut (false);
-
-        StopCoroutine ("WaitWhenAllIsSleeping");
-        StartCoroutine ("WaitWhenAllIsSleeping");
+       if(!ServerController.serverController.isModeCard) {
+            StopCoroutine ("WaitWhenAllIsSleeping");
+            StartCoroutine ("WaitWhenAllIsSleeping");
+       } else {
+           StopCoroutine ("WaitWhenAllIsSleeping2");
+           StartCoroutine ("WaitWhenAllIsSleeping2");
+       }
 
     }
 
@@ -1041,6 +1050,78 @@ public class CueController : MonoBehaviour {
         }
     }
 
+    IEnumerator WaitWhenAllIsSleeping2 () {
+        if(ServerController.serverController) {
+            if(!MenuControllerGenerator.controller.playWithAI) {
+                networkAllIsSleeping = false;
+            }
+            gameManager.ballsInMove = true;
+        }
+        while(ballController.ballIsSelected || !allIsSleeping || ballIsOut || ballController.ballIsOut) {
+            yield return null;
+        }
+
+        if(ServerController.serverController) {
+            if(!MenuControllerGenerator.controller.playWithAI) {
+                ServerController.serverController.SendRPCToServer ("OnChanghAllIsSleeping", ServerController.serverController.otherNetworkPlayer);
+            }
+            bool isMyQueue = ServerController.serverController.isMyQueue;
+
+            if(gameManager.needToChangeQueue) {
+                ServerController.serverController.isMyQueue = false;
+            }
+
+            if(MenuControllerGenerator.controller.playWithAI) {
+                networkAllIsSleeping = true;
+            }
+            if(isMyQueue || MenuControllerGenerator.controller.playWithAI) {
+                if(!MenuControllerGenerator.controller.playWithAI) {
+                    while(!networkAllIsSleeping) {
+                        foreach(BallController item in ballControllers) {
+                            if(networkAllIsSleeping)
+                                break;
+                            item.CancelInvokeSetBallCollisionData ();
+                            ServerController.serverController.SendRPCToServer ("SetBallSleeping", ServerController.serverController.otherNetworkPlayer, item.id, item.GetComponent<Rigidbody> ().position);
+                            yield return null;
+                        }
+                    }
+                }
+
+                if(gameManager.needToForceChangeQueue || gameManager.needToChangeQueue) {
+
+                    while(!networkAllIsSleeping) {
+                        yield return null;
+                    }
+                    if((gameManager.isFirstShot && gameManager.firstShotHitCount < 4) || gameManager.setMoveInTable) {
+                        if(isMyQueue) {
+                            ServerController.serverController.SendRPCToServer ("SetMoveInTable", ServerController.serverController.otherNetworkPlayer);
+                        } else {
+                            cueFSMController.setMoveInTable ();
+                        }
+                    }
+                }
+            }
+
+            gameManager.isFirstShot = false;
+            gameManager.setMoveInTable = true;
+            gameManager.needToChangeQueue = true;
+            gameManager.needToForceChangeQueue = false;
+            gameManager.firstHitBall = null;
+            gameManager.gameInfoErrorText = "";
+            gameManager.ballsInMove = false;
+
+            gameManager.mainBallIsOut = false;
+            gameManager.otherMainBallIsOut = false;
+
+            RessetShotOptions ();
+
+            if(MenuControllerGenerator.controller.playWithAI && !isMyQueue) {
+                ServerController.serverController.serverMessenger.ShotWithAI ();
+            }
+        }
+    }
+
+
     public void OnPlayBallSound (float volume) {
         ballController.GetComponent<AudioSource> ().volume = volume;
         ballController.GetComponent<AudioSource> ().Play ();
@@ -1097,5 +1178,28 @@ public class CueController : MonoBehaviour {
         if(ballController.ballIsSelected) {
             OnUnselectBall ();
         }
+    }
+
+    public CircularSlider cueCircularSlider;
+    float rotation = 0.0f;
+    public void changeRotateCue (CircularSlider circularSlider) {
+        MenuControllerGenerator.controller.canControlCue = false;
+        //transform.Rotate (Vector3.up, -rotationSpeed * camera3dSlider.displacementZ * Time.deltaTime);
+        rotation -= 0.5f * 5 * circularSlider.displacementX * Time.deltaTime;
+        //rotation = Mathf.Clamp (rotation, minAngle, maxAngle);
+        //rotator.localRotation = Quaternion.Euler (rotation, 0.0f, 0.0f);
+
+        //float orientY = menu.GetScreenPoint ().y - cuePivotScreenPoint.y > 0.0f ? 1.0f : -1.0f;
+        //float orientX = menu.GetScreenPoint ().x - cuePivotScreenPoint.x > 0.0f ? 1.0f : -1.0f;
+        //float speed = orientY * menu.MouseScreenSpeed.x - orientX * menu.MouseScreenSpeed.y;
+
+        //touchRotateAngle = Mathf.Lerp (touchRotateAngle,
+        //                              touchSensitivity * speed * Mathf.Abs (speed) * Time.deltaTime, 10.0f * Time.deltaTime);
+
+        //cuePivot.Rotate (Vector3.up, touchRotateAngle);
+
+       float rotateAngle = Mathf.Lerp (rotation, 10, 45);
+        //-5 * circularSlider.displacementX * Time.deltaTime
+       cuePivot.Rotate (Vector3.up, rotateAngle);
     }
 }

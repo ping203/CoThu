@@ -65,7 +65,8 @@ public class LogicAI : MonoBehaviour
 					if (ballController.isBlack && !cueController.gameManager.afterOtherRemainedBlackBall) {
 						continue;
 					} 
-					if (!cueController.gameManager.tableIsOpened && cueController.gameManager.ballType == ballController.ballType) {
+					if (!cueController.gameManager.tableIsOpened &&
+                        (cueController.gameManager.ballType == ballController.ballType || cueController.gameManager.otherProfileNew.checkBallCard(ballController.id))) {
 						continue;
 					}
 

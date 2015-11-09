@@ -129,14 +129,15 @@ public class GameManager : MonoBehaviour {
             //StartCoroutine(otherProfile.SetAvatar(firstAvatar));
             //StartCoroutine(myProfile.SetAvatar(secondAvatar));
         }
+        if(ServerController.serverController.isModeCard) {
+            genCard ();
 
-        genCard ();
-
-        for(int i = 0; i < cardsID.Count; i++) {
-            if(i < 9) {
-                myProfileNew.AddGuiCard (cardsID[i], i);
-            } else {
-                otherProfileNew.AddGuiCard (cardsID[i], i - 9);
+            for(int i = 0; i < cardsID.Count; i++) {
+                if(i < 9) {
+                    myProfileNew.AddGuiCard (cardsID[i], i);
+                } else {
+                    otherProfileNew.AddGuiCard (cardsID[i], i - 9);
+                }
             }
         }
     }

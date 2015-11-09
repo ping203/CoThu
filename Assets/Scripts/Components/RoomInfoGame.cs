@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class RoomInfo {
+public class RoomInfoGame {
 
-    public RoomInfo()
+    public RoomInfoGame ()
     {
         // TODO Auto-generated constructor stub
     }
