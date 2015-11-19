@@ -1,0 +1,197 @@
+fileFormatVersion: 2
+guid: 36e16873707911642b8f4e1ad4cb288c
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: 1
+    21300002: 10
+    21300004: 11
+    21300006: 12
+    21300008: 13
+    21300010: 2
+    21300012: 3
+    21300014: 4
+    21300016: 5
+    21300018: 6
+    21300020: 7
+    21300022: 8
+    21300024: 9
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: 1
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 823
+        width: 100
+        height: 97
+      alignment: 9
+      pivot: {x: .5, y: .484536082}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 10
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 923
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 11
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 351
+        width: 98
+        height: 89
+      alignment: 9
+      pivot: {x: .489795923, y: .483146071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 12
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 831
+        width: 100
+        height: 92
+      alignment: 9
+      pivot: {x: .5, y: .456521749}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 13
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 258
+        width: 78
+        height: 91
+      alignment: 9
+      pivot: {x: .641025662, y: .450549453}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 2
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 443
+        width: 99
+        height: 92
+      alignment: 9
+      pivot: {x: .50505048, y: .456521749}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 3
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 728
+        width: 100
+        height: 92
+      alignment: 9
+      pivot: {x: .5, y: .456521749}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 4
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 538
+        width: 100
+        height: 92
+      alignment: 9
+      pivot: {x: .5, y: .456521749}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 5
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 737
+        width: 100
+        height: 92
+      alignment: 9
+      pivot: {x: .5, y: .456521749}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 6
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 642
+        width: 99
+        height: 92
+      alignment: 9
+      pivot: {x: .50505048, y: .456521749}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 7
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 633
+        width: 100
+        height: 92
+      alignment: 9
+      pivot: {x: .5, y: .456521749}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 8
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 547
+        width: 99
+        height: 92
+      alignment: 9
+      pivot: {x: .50505048, y: .456521749}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 9
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 926
+        width: 100
+        height: 97
+      alignment: 9
+      pivot: {x: .5, y: .484536082}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

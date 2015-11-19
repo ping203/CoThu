@@ -248,7 +248,7 @@ public class CueController : MonoBehaviour {
         canvasAndBallMask = canvasMask | ballMask;
 
         camera3D.enabled = false;
-        camera2D.enabled = false;
+        //camera2D.enabled = false;
 
         collisionSphere.GetComponent<Renderer> ().sharedMaterial.mainTexture = collisionBall;
 
@@ -1168,7 +1168,7 @@ public class CueController : MonoBehaviour {
         lights.enabled = is3D;
         currentCamera = is3D ? camera3D : camera2D;
         camera3D.enabled = false;
-        camera2D.enabled = false;
+        //camera2D.enabled = false;
         currentCamera.enabled = true;
         cameraCircularSlider.SetActive (btn.state);
         PlayerPrefs.SetInt ("Current Camera", btn.state ? 1 : 0);
@@ -1185,7 +1185,7 @@ public class CueController : MonoBehaviour {
     public void changeRotateCue (CircularSlider circularSlider) {
         MenuControllerGenerator.controller.canControlCue = false;
         //transform.Rotate (Vector3.up, -rotationSpeed * camera3dSlider.displacementZ * Time.deltaTime);
-        rotation -= 0.5f * 5 * circularSlider.displacementX * Time.deltaTime;
+        rotation -= circularSlider.displacementX * Time.deltaTime;
         //rotation = Mathf.Clamp (rotation, minAngle, maxAngle);
         //rotator.localRotation = Quaternion.Euler (rotation, 0.0f, 0.0f);
 

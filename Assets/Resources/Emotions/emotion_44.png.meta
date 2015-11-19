@@ -1,0 +1,274 @@
+fileFormatVersion: 2
+guid: 3c81ea8d12818fe40828723aa4c26161
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: 1
+    21300002: 10
+    21300004: 11
+    21300006: 12
+    21300008: 13
+    21300010: 14
+    21300012: 15
+    21300014: 16
+    21300016: 18
+    21300018: 19
+    21300020: 2
+    21300022: 20
+    21300024: 21
+    21300026: 3
+    21300028: 4
+    21300030: 5
+    21300032: 6
+    21300034: 7
+    21300036: 8
+    21300038: 9
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: 1
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 93
+        width: 60
+        height: 81
+      alignment: 9
+      pivot: {x: .466666669, y: .512345672}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 10
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 181
+        width: 63
+        height: 74
+      alignment: 9
+      pivot: {x: .539682567, y: .587837815}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 11
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 98
+        width: 65
+        height: 75
+      alignment: 9
+      pivot: {x: .507692337, y: .579999983}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 12
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 105
+        width: 60
+        height: 72
+      alignment: 9
+      pivot: {x: .5, y: .590277791}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 13
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 174
+        width: 72
+        height: 81
+      alignment: 9
+      pivot: {x: .541666687, y: .524691343}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 14
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 90
+        width: 64
+        height: 81
+      alignment: 9
+      pivot: {x: .515625, y: .537037015}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 15
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 177
+        width: 68
+        height: 78
+      alignment: 9
+      pivot: {x: .54411763, y: .557692289}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 16
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 182
+        width: 60
+        height: 73
+      alignment: 9
+      pivot: {x: .5, y: .582191765}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 18
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 20
+        width: 66
+        height: 72
+      alignment: 9
+      pivot: {x: .560606062, y: .576388896}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 19
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 40
+        width: 56
+        height: 63
+      alignment: 9
+      pivot: {x: .5, y: .59523809}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 2
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 60
+        height: 85
+      alignment: 9
+      pivot: {x: .466666669, y: .488235295}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 20
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 117
+        width: 54
+        height: 61
+      alignment: 9
+      pivot: {x: .5, y: .581967235}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 21
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 110
+        width: 65
+        height: 67
+      alignment: 9
+      pivot: {x: .538461566, y: .514925361}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 3
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 122
+        width: 61
+        height: 79
+      alignment: 9
+      pivot: {x: .475409836, y: .512658238}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 4
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 175
+        width: 61
+        height: 80
+      alignment: 9
+      pivot: {x: .44262296, y: .493750006}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 5
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 179
+        width: 59
+        height: 76
+      alignment: 9
+      pivot: {x: .440677971, y: .506578922}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 6
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 29
+        width: 56
+        height: 74
+      alignment: 9
+      pivot: {x: .464285702, y: .520270288}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 7
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 179
+        width: 60
+        height: 76
+      alignment: 9
+      pivot: {x: .5, y: .532894731}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 8
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 12
+        width: 58
+        height: 82
+      alignment: 9
+      pivot: {x: .5, y: .530487776}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 9
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 44
+        width: 59
+        height: 79
+      alignment: 9
+      pivot: {x: .491525412, y: .550632894}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

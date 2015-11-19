@@ -29,7 +29,7 @@ public class PanelYesNo : PanelGame {
     public void onShow(string mess, CallBack clickOK) {
         DoOnMainThread.ExecuteOnMainThread.Enqueue(() => {
             label.text = mess;
-            //btnCancel.gameObject.SetActive(true);
+            btnCancel.gameObject.SetActive(true);
             btnOK.gameObject.SetActive(true);
             onClickOK = clickOK;
             onShow();

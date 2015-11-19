@@ -65,9 +65,10 @@ public class GameManager : MonoBehaviour {
     public bool ballsInMove = false;
 
     public GameObject menu;
-
+    public GameObject chat;
     public List<int> cardsID = new List<int> ();
 
+    public GameObject panelYesNo;
     void Awake () {
         if(!MenuControllerGenerator.controller)
             return;
@@ -242,6 +243,7 @@ public class GameManager : MonoBehaviour {
         otherProfileNew.coins.text = otherCoins.ToString ();
     }
     public void ActivateMenuButtons (bool value) {
+        chat.SetActive (false);
         if(!value) {
             menu.SetActive (value);
         }
@@ -376,5 +378,9 @@ public class GameManager : MonoBehaviour {
         }
         yield return new WaitForSeconds (1.5f);
         MenuControllerGenerator.controller.LoadLevel (Application.loadedLevel);
+    }
+
+    public void onClickBack () {
+        panelYesNo.gameObject.SetActive (true);
     }
 }

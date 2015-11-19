@@ -20,6 +20,8 @@ public class ProfilePlayer : MonoBehaviour {
     int countBall;
     int countCard;
 
+    public Chat chatInfo;
+
     public void OnAwakeGameManager () {
         timeSlider.Resset ();
 
@@ -136,5 +138,12 @@ public class ProfilePlayer : MonoBehaviour {
 
     void Update () {
 
+    }
+
+    public void setChat (string msg, int id) {
+        if(id > 0)
+            chatInfo.setEmotion (id);
+        else
+            chatInfo.setText (msg);
     }
 }
