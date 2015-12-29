@@ -11,7 +11,7 @@ public class CueForce : MonoBehaviour {
     private CueController cueController;
 
     //UISlider sliderCue;
-	public UnityEngine.UI.Slider sliderCue;
+    public UnityEngine.UI.Slider sliderCue;
     void Awake () {
         //if(MenuControllerGenerator.controller) {
         //    if(!MenuControllerGenerator.controller.isTouchScreen) {
@@ -19,18 +19,18 @@ public class CueForce : MonoBehaviour {
         //        return;
         //    } 
         //}
-		//sliderCue = GetComponent<UnityEngine.UI.Slider> ();
-          //EventDelegate.Set (sliderCue.onChange, delegate { MoveForceSlider (); });
-          //sliderCue.onDragFinished += finishDrag;
+        //sliderCue = GetComponent<UnityEngine.UI.Slider> ();
+        //EventDelegate.Set (sliderCue.onChange, delegate { MoveForceSlider (); });
+        //sliderCue.onDragFinished += finishDrag;
 
-		sliderCue.onValueChanged.AddListener (delegate {MoveForceSlider ();});
+        sliderCue.onValueChanged.AddListener (delegate { MoveForceSlider (); });
     }
     void Start () {
         sliderCue.value = startValue;
         cueController.inTouchForceSlider = false;
         cueController.cueForceisActive = false;
     }
-    
+
     public void MoveForceSlider () {
         if(!cueController.allIsSleeping)
             return;
@@ -41,22 +41,32 @@ public class CueForce : MonoBehaviour {
         cueController.inTouchForceSlider = true;
         cueController.cueForceisActive = true;
 
-		cueForceValue = 1 - sliderCue.value;
-		cueController.cueDisplacement = cueController.cueMaxDisplacement * cueForceValue;
+        cueForceValue = 1 - sliderCue.value;
+        cueController.cueDisplacement = cueController.cueMaxDisplacement * cueForceValue;
     }
 
-	void finishDrag () {        
-		cueForceValue = 1 - sliderCue.value;
-		cueController.cueDisplacement = cueController.cueMaxDisplacement * cueForceValue;
-		sliderCue.value = startValue;
-	}
+    void finishDrag () {
+        cueForceValue = 1 - sliderCue.value;
+        cueController.cueDisplacement = cueController.cueMaxDisplacement * cueForceValue;
+        sliderCue.value = startValue;
+    }
 
     public void Resset () {
         StartCoroutine (WaitAndRessetValue ());
     }
     IEnumerator WaitAndRessetValue () {
         yield return new WaitForEndOfFrame ();
-		if(sliderCue.gameObject.activeInHierarchy)
-        sliderCue.value = startValue;
+        if(sliderCue.gameObject.activeInHierarchy)
+            sliderCue.value = startValue;
+    }
+
+    public  bool isUP = true;
+
+    public void ControlDown () {
+        isUP = false;
+    }
+
+    public void ControlUp () {
+        isUP = true;
     }
 }

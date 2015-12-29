@@ -631,7 +631,7 @@ public class CueController : MonoBehaviour {
                     }
 
 
-                    if((!menu.GetButton () || (MenuControllerGenerator.controller.isTouchScreen)) && !menu.GetButtonUp () && allIsSleeping && !inTouchForceSlider) {
+                    if((!menu.GetButton () || (MenuControllerGenerator.controller.isTouchScreen)) && !menu.GetButtonUp () && allIsSleeping && !inTouchForceSlider && cueForce.isUP) {
                         if(MenuControllerGenerator.controller.isTouchScreen) {
                             Vector3 cuePivotScreenPoint = currentCamera.WorldToScreenPoint (cuePivot.position);
                             float orientY = menu.GetScreenPoint ().y - cuePivotScreenPoint.y > 0.0f ? 1.0f : -1.0f;
